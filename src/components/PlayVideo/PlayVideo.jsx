@@ -8,10 +8,12 @@ import save from "../../assets/save.png";
 import jack from "../../assets/jack.png";
 import user_proflie from "../../assets/user_proflie.jpg";
 
-const PlayVideo = () => {
+const PlayVideo = ({videoId}) => {
   return (
     <div className="play-video">
-      <video src={video1} controls autoPlay muted width="600"></video>
+      {/* <video src={video1} controls autoPlay muted width="600"></video> */}
+      <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+
       <h3>Start Your Day with 12 Minutes of Refreshing Yoga</h3>
       <div className="play-video-info">
         <p>1525 Views &bull; 2 days ago</p>
